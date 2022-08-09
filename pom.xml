@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.iamvoragun</groupId>  <!-- company name -->
-    <artifactId>sample</artifactId> <!-- name of project -->
+    <artifactId>Simple-Iamvoragun</artifactId> <!-- name of project -->
     <version>demo</version>  
     
     <properties>
