@@ -1,13 +1,15 @@
 package web;
 
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 class Home {
-    @GetMapping("/")
-    String showHome(){
+    @RequestMapping("/")
+    String showHome(HttpSession session){
         return "home";   // home.html
     }
     
