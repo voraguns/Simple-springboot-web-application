@@ -1,12 +1,14 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.iamvoragun</groupId>
-    <artifactId>sample</artifactId>
-    <version>demo</version>
+    <groupId>com.iamvoragun</groupId>  <!-- company name -->
+    <artifactId>sample</artifactId> <!-- name of project -->
+    <version>demo</version>  
     
     <properties>
         <maven.complier.source>18</maven.complier.source>
         <maven.complier.target>18</maven.complier.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
     
     <build>
