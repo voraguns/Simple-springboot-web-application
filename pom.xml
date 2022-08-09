@@ -1,0 +1,35 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.iamvoragun</groupId>
+    <artifactId>sample</artifactId>
+    <version>demo</version>
+    
+    <properties>
+        <maven.complier.source>18</maven.complier.source>
+        <maven.complier.target>18</maven.complier.target>
+    </properties>
+    
+    <build>
+        <sourceDirectory>java/code</sourceDirectory>
+        <testSourceDirectory>java/test</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>java/data</directory>
+            </resource>
+        </resources>
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
+</project>
