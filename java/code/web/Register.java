@@ -19,5 +19,14 @@ class Register {
         return "finish";
     }
     
+    @RequestMapping("/member-register-success")
+    String registerSuccess(){
+        return "register-status";
+    }
+    
+    @RequestMapping("/member-register-error")
+    String registerError(){
+        return "register-status";
+    }
     
 }

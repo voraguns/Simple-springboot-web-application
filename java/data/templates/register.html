@@ -1,73 +1,92 @@
 <#include "header.html">
-
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
             <span class="fs-4">Registration</span>
         </a>
-        
+
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
         </ul>
 </div>
 
-<section class="container">
-	<form method="post">
-		<h3>Create Account</h3>
-		<section class="form-floating">
-			<input name="email"
-				   type="email"
-				   id="email"
-				   class="form-control"
-				   autocomplete="off"
-				   autofocus
-				   required
-				   placeholder="Your Email" />
-			<label for="email">Your Email</label>
-		</section>
-		
-		<section class="form-floating">
-			<input name="password"
-				   type="password"
-				   id="password"
-				   class="form-control"
-				   autocomplete="off"
-				   required
-				   placeholder="Your Password" />
-			<label for="password">Your Password</label>
-		</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <section class="container">
+                <form method="post">
+                    <h3>Create Account</h3>
+                    <section class="form-floating">
+                        <input name="email"
+                               type="email"
+                               id="email"
+                               class="form-control"
+                               autocomplete="off"
+                               autofocus
+                               required
+                               placeholder="Your Email" />
+                        <label for="email">Your Email</label>
+                    </section>
 
-		<section class="form-floating">
-			<input name="first-name"
-				   id="first-name"
-				   class="form-control"
-				   autocomplete="off"
-				   required
-				   placeholder="Your First Name" />
-			<label for="first-name">First Name</label>
-		</section>
-		
-		<section class="form-floating">
-			<input name="last-name"
-				   id="last-name"
-				   class="form-control"
-				   autocomplete="off"
-				   required
-				   placeholder="Your Last Name" />
-			<label for="last-name">Last Name</label>
-		</section>
-		
-		<button class="btn btn-primary">Register</button>
-		<a class="btn btn-light" href="/">Cancel</a>
-	</form>
-</section>
+                    <section class="form-floating">
+                        <input name="password"
+                               type="password"
+                               id="password"
+                               class="form-control"
+                               autocomplete="off"
+                               required
+                               placeholder="Your Password" />
+                        <label for="password">Your Password</label>
+                    </section>
 
+                    <section class="form-floating">
+                        <input name="first-name"
+                               id="first-name"
+                               class="form-control"
+                               autocomplete="off"
+                               required
+                               placeholder="Your First Name" />
+                        <label for="first-name">First Name</label>
+                    </section>
+
+                    <section class="form-floating">
+                        <input name="last-name"
+                               id="last-name"
+                               class="form-control"
+                               autocomplete="off"
+                               required
+                               placeholder="Your Last Name" />
+                        <label for="last-name">Last Name</label>
+                    </section>
+
+                    <button class="btn btn-primary">Register</button>
+                    <a class="btn btn-light" href="/">Cancel</a>
+                </form>
+            </section>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tips for password</h5>
+                    <p class="card-text">
+                        Your password must contain:<br>
+                        At least one upper case English letter (i.e. A-Z)<br>
+                        At least one lower case English letter (i.e. a-z)<br>
+                        At least one digit (i.e. 0-9)<br>
+                        Minimum eight characters in length
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <style>
-	form {
-		max-width: 320px;
-		margin-bottom: 2rem;
-	}
+    form {
+        max-width: 320px;
+        margin-bottom: 2rem;
+    }
 </style>
 
 </<body>
