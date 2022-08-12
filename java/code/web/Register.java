@@ -42,6 +42,25 @@ class Register {
         
         if (success){
             EntityManager manager = Common.getManager();
+            try {
+                Team team = manager.find(Team.class, 1);
+                Member m = new Member();
+                m.email = email;
+                m.firstName = first;
+                m.lastName = last;
+                m.password = Common.encrypt(password);
+                m.team = team;
+                
+                manager.getTransaction().begin();
+                manager.persist(m);
+                manager.getTransaction().commit();
+                
+                Activate a = new Activate();
+                
+            } catch (Exception e) {
+                // in case of duplicate email
+                success = false;
+            } 
         }
         return "finish";
     }
