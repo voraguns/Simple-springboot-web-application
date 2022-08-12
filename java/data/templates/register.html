@@ -18,6 +18,26 @@
                 <form method="post">
                     <h3>Create Account</h3>
                     <section class="form-floating">
+                        <input name="first-name"
+                               id="first-name"
+                               class="form-control"
+                               autocomplete="off"
+                               required
+                               placeholder="Your First Name" />
+                        <label for="first-name">First Name</label>
+                    </section>
+
+                    <section class="form-floating">
+                        <input name="last-name"
+                               id="last-name"
+                               class="form-control"
+                               autocomplete="off"
+                               required
+                               placeholder="Your Last Name" />
+                        <label for="last-name">Last Name</label>
+                    </section>
+                    
+                    <section class="form-floating">
                         <input name="email"
                                type="email"
                                id="email"
@@ -38,27 +58,7 @@
                                required
                                placeholder="Your Password" />
                         <label for="password">Your Password</label>
-                    </section>
-
-                    <section class="form-floating">
-                        <input name="first-name"
-                               id="first-name"
-                               class="form-control"
-                               autocomplete="off"
-                               required
-                               placeholder="Your First Name" />
-                        <label for="first-name">First Name</label>
-                    </section>
-
-                    <section class="form-floating">
-                        <input name="last-name"
-                               id="last-name"
-                               class="form-control"
-                               autocomplete="off"
-                               required
-                               placeholder="Your Last Name" />
-                        <label for="last-name">Last Name</label>
-                    </section>
+                    </section>                
 
                     <button class="btn btn-primary">Register</button>
                     <a class="btn btn-light" href="/">Cancel</a>
