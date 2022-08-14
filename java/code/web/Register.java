@@ -3,6 +3,7 @@ package web;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,22 +57,39 @@ class Register {
                 manager.getTransaction().commit();
                 
                 Activate a = new Activate();
+                a.member = m;
+                a.secret = Common.random(20);
                 
+                manager.getTransaction().begin();
+                manager.persist(m);
+                manager.getTransaction().commit();
+                
+                Email e = new Email();
+                e.sendActivationCode(m.email, a.secret, a.code);
             } catch (Exception e) {
                 // in case of duplicate email
                 success = false;
             } 
+            manager.close();
         }
-        return "finish";
+        
+        if(success) {
+            return "redirect:/member-register-success";
+        }
+        return "redirect:/member-register-error";
     }
 
     @RequestMapping("/member-register-success")
-    String registerSuccess() {
+    String registerSuccess(Model m) {
+        m.addAttribute("title", "Registration Successfully");
+        m.addAttribute("detail", "Please go to your email box to active " + "your account.");
         return "register-status";
     }
 
     @RequestMapping("/member-register-error")
-    String registerError() {
+    String registerError(Model m) {
+        m.addAttribute("title", "Registration Failed");
+        m.addAttribute("detail", "Uable to register with your email.");
         return "register-status";
     }
 
